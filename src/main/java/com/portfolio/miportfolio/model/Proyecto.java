@@ -2,15 +2,15 @@ package com.portfolio.miportfolio.model;
 
 
 public class Proyecto {
-
-	private String id;	
+	
+	private int id;	
 	private String nombre;	
 	private String descripcion;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNombre() {

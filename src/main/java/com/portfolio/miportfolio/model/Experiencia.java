@@ -2,6 +2,7 @@ package com.portfolio.miportfolio.model;
 
 public class Experiencia {
 	
+	private int id;
 	private String empresa;
 	private String año;
 	private String puesto;
@@ -31,11 +32,17 @@ public class Experiencia {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	@Override
 	public String toString() {
-		return "ExperienciaLaboral [empresa=" + empresa + ", año=" + año + ", puesto=" + puesto + ", descripcion="
-				+ descripcion + "]";
+		return "Experiencia [id=" + id + ", empresa=" + empresa + ", año=" + año + ", puesto=" + puesto
+				+ ", descripcion=" + descripcion + "]";
 	}
 	
 }

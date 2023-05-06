@@ -2,10 +2,17 @@ package com.portfolio.miportfolio.model;
 
 public class Usuario {
 	
+	private int id;
 	private String nombre;
 	private String mail;
 	private String password;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -27,9 +34,8 @@ public class Usuario {
 	
 	@Override
 	public String toString() {
-		return "Usuario [nombre=" + nombre + ", mail=" + mail + ", password=" + password + "]";
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", mail=" + mail + ", password=" + password + "]";
 	}
 	
 	
-
 }
