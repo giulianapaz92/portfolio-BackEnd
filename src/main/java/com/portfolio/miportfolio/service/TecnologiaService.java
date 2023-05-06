@@ -2,8 +2,11 @@ package com.portfolio.miportfolio.service;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import com.portfolio.miportfolio.model.Tecnologia;
 
+@Service
 public class TecnologiaService implements ITecnologiaService{
 
 	@Override
