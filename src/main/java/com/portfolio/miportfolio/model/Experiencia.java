@@ -1,10 +1,12 @@
 package com.portfolio.miportfolio.model;
 
+import java.util.Date;
+
 public class Experiencia {
 	
 	private int id;
 	private String empresa;
-	private String año;
+	private Date fecha;
 	private String puesto;
 	private String descripcion;
 	
@@ -14,11 +16,11 @@ public class Experiencia {
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
-	public String getAño() {
-		return año;
+	public Date getFecha() {
+		return fecha;
 	}
-	public void setAño(String año) {
-		this.año = año;
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
 	}
 	public String getPuesto() {
 		return puesto;
@@ -41,7 +43,7 @@ public class Experiencia {
 	
 	@Override
 	public String toString() {
-		return "Experiencia [id=" + id + ", empresa=" + empresa + ", año=" + año + ", puesto=" + puesto
+		return "Experiencia [id=" + id + ", empresa=" + empresa + ", año=" + fecha + ", puesto=" + puesto
 				+ ", descripcion=" + descripcion + "]";
 	}
 	
