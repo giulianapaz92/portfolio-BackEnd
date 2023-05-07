@@ -11,6 +11,6 @@ public interface IProyectoService {
 	
 	public void eliminar();
 	
-	public Proyecto editar();
+	public Proyecto editar(Proyecto proyecto);
 
 }

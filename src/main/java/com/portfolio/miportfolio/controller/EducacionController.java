@@ -33,7 +33,7 @@ public class EducacionController {
 	
 	@PutMapping("/editar")
 	 public Educacion editar(@RequestBody Educacion educacion) {
-		 return educacionService.editar();
+		 return educacionService.editar(educacion);
 	 }
 	
 }

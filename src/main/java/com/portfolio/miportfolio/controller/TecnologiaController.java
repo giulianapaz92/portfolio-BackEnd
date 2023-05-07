@@ -33,7 +33,7 @@ public class TecnologiaController {
 	 
 	 @PutMapping("/editar")
 	 public Tecnologia editar(@RequestBody Tecnologia tecnologia) {
-		 return tecnologiaService.editar();
+		 return tecnologiaService.editar(tecnologia);
 	 }
 
 }

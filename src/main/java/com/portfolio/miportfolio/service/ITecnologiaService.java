@@ -11,6 +11,6 @@ public interface ITecnologiaService {
 	
 	public void eliminar();
 	
-	public Tecnologia editar();
+	public Tecnologia editar(Tecnologia tecnologia);
 
 }

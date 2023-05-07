@@ -34,7 +34,7 @@ public class ExperienciaController {
 		 
 	@PutMapping("/editar")
 	public Experiencia editar(@RequestBody Experiencia experiencia) {
-		return experienciaService.editar();
+		return experienciaService.editar(experiencia);
 	}
 
 }

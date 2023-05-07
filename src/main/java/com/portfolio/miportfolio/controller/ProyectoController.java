@@ -33,7 +33,7 @@ public class ProyectoController {
 	 
 	@PutMapping("/editar")
 	public Proyecto editar(@RequestBody Proyecto proyecto) {
-		return proyectoService.editar();
+		return proyectoService.editar(proyecto);
 	}
 
 }

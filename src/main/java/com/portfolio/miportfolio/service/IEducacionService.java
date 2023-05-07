@@ -11,7 +11,7 @@ public interface IEducacionService {
 	
 	public void eliminar();
 	
-	public Educacion editar();
+	public Educacion editar(Educacion educacion);
 	
 
 }

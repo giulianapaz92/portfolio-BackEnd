@@ -11,6 +11,6 @@ public interface IExperienciaService {
 	
 	public void eliminar();
 	
-	public Experiencia editar();
+	public Experiencia editar(Experiencia experiencia);
 	
 }

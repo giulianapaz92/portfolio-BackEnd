@@ -1,15 +1,14 @@
 package com.portfolio.miportfolio.model;
 
-import java.util.Date;
 
 public class Educacion {
 	
 	private int id;
 	private String nombre;
 	private String estado;
-	private Date fecha;
+	private String fechaDesde;
+	private String fechaHasta;
 	private String titulo;
-	
 	
 	public int getId() {
 		return id;
@@ -29,24 +28,30 @@ public class Educacion {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-
+	public String getFechaDesde() {
+		return fechaDesde;
+	}
+	public void setFechaDesde(String fechaDesde) {
+		this.fechaDesde = fechaDesde;
+	}
+	public String getFechaHasta() {
+		return fechaHasta;
+	}
+	public void setFechaHasta(String fechaHasta) {
+		this.fechaHasta = fechaHasta;
+	}
 	public String getTitulo() {
 		return titulo;
 	}
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public Date getFecha() {
-		return fecha;
-	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-	
 	@Override
 	public String toString() {
-		return "Educacion [id=" + id + ", nombre=" + nombre + ", estado=" + estado + ", fecha=" + fecha + ", titulo="
-				+ titulo + "]";
+		return "Educacion [id=" + id + ", nombre=" + nombre + ", estado=" + estado + ", fechaDesde=" + fechaDesde
+				+ ", fechaHasta=" + fechaHasta + ", titulo=" + titulo + "]";
 	}
+	
+	
 	
 }
