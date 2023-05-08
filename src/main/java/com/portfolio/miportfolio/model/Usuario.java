@@ -1,16 +1,23 @@
 package com.portfolio.miportfolio.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Usuario {
-	
-	private int id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private Long id;
 	private String nombre;
 	private String mail;
 	private String password;
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -31,11 +38,9 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", mail=" + mail + ", password=" + password + "]";
 	}
-	
-	
+
 }

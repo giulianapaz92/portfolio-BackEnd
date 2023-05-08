@@ -1,18 +1,25 @@
 package com.portfolio.miportfolio.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Experiencia {
-	
-	private int id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private Long id;
 	private String empresa;
 	private String fechaDesde;
 	private String fechaHasta;
 	private String puesto;
 	private String descripcion;
-	public int getId() {
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getEmpresa() {
@@ -50,6 +57,5 @@ public class Experiencia {
 		return "Experiencia [id=" + id + ", empresa=" + empresa + ", fechaDesde=" + fechaDesde + ", fechaHasta="
 				+ fechaHasta + ", puesto=" + puesto + ", descripcion=" + descripcion + "]";
 	}
-	
 	
 }
