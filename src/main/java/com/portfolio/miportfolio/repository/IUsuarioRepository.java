@@ -1,5 +1,10 @@
 package com.portfolio.miportfolio.repository;
 
-public interface IUsuarioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.portfolio.miportfolio.model.Usuario;
+
+@Repository
+public interface IUsuarioRepository extends JpaRepository<Usuario, Long>{
 
 }
