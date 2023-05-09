@@ -1,6 +1,6 @@
 package com.portfolio.miportfolio.controller;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,13 +22,13 @@ public class EducacionController {
 	IEducacionService educacionService;
 	
 	@GetMapping("/estudios")
-	public ArrayList<Educacion>getEstudios() {
+	public List<Educacion>getEstudios() {
 		return educacionService.getEstudios();
 	}
 	
 	@DeleteMapping("/eliminar/{id}")
-	public void eliminar (@PathVariable String id) {
-		educacionService.eliminar();
+	public void eliminar (@PathVariable Long id) {
+		educacionService.eliminar(id);
 	}
 	
 	@PutMapping("/editar")

@@ -1,17 +1,15 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
-
+import java.util.List;
 
 import com.portfolio.miportfolio.model.Educacion;
 
 public interface IEducacionService {
 	
-	public ArrayList<Educacion> getEstudios();
+	public List<Educacion> getEstudios();
 	
-	public void eliminar();
+	public void eliminar(Long id);
 	
 	public Educacion editar(Educacion educacion);
-	
 
 }

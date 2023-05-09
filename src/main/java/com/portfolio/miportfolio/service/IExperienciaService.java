@@ -1,15 +1,14 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
-
+import java.util.List;
 
 import com.portfolio.miportfolio.model.Experiencia;
 
 public interface IExperienciaService {
 
-	public ArrayList<Experiencia> getExperiencia();
+	public List<Experiencia> getExperiencia();
 	
-	public void eliminar();
+	public void eliminar(Long id);
 	
 	public Experiencia editar(Experiencia experiencia);
 	

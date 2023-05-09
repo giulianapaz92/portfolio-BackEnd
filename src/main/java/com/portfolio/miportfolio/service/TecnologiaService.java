@@ -1,35 +1,33 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.portfolio.miportfolio.model.Tecnologia;
-import com.portfolio.miportfolio.repository.TecnologiaRepository;
+import com.portfolio.miportfolio.repository.ITecnologiaRepository;
 
 @Service
 public class TecnologiaService implements ITecnologiaService{
 	
 	@Autowired
-	TecnologiaRepository tecnologiaRepository;
+	private ITecnologiaRepository tecnologiaRepository;
 	
 	@Override
-	public ArrayList<Tecnologia> getTecnologia() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Tecnologia> getTecnologia() {
+		List<Tecnologia> listaTecnologias = tecnologiaRepository.findAll();
+		return listaTecnologias;
 	}
 
 	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	public void eliminar(Long id) {
+		tecnologiaRepository.deleteById(id);
 	}
 
 	@Override
 	public Tecnologia editar(Tecnologia tecnologia) {
-		// TODO Auto-generated method stub
-		return null;
+		return tecnologiaRepository.save(tecnologia);
 	}
 
 }

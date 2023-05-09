@@ -1,6 +1,8 @@
 package com.portfolio.miportfolio.controller;
 
-import java.util.ArrayList;
+
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,13 +25,13 @@ public class ExperienciaController {
 	IExperienciaService experienciaService;
 		
 	@GetMapping("/experiencias")
-	public ArrayList<Experiencia> getExperiencia() {
+	public List<Experiencia> getExperiencia() {
 		return experienciaService.getExperiencia();
 	}
 		 
 	@DeleteMapping("/eliminar/{id}")
-	public void eliminar(@PathVariable String id) {
-		experienciaService.eliminar();
+	public void eliminar(@PathVariable Long id) {
+		experienciaService.eliminar(id);
 	}
 		 
 	@PutMapping("/editar")

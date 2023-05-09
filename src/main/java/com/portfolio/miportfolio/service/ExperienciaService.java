@@ -1,35 +1,36 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
+
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.portfolio.miportfolio.model.Experiencia;
-import com.portfolio.miportfolio.repository.ExperienciaRepository;
+import com.portfolio.miportfolio.repository.IExperienciaRepository;
 
 @Service
 public class ExperienciaService implements IExperienciaService{
 	
 	@Autowired
-	ExperienciaRepository experienciaRepository;
+	private IExperienciaRepository experienciaRepository;
 
 	@Override
-	public ArrayList<Experiencia> getExperiencia() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public List<Experiencia> getExperiencia() {
+		List<Experiencia> listaExperiencia = experienciaRepository.findAll();
+		return listaExperiencia;
+	} 
 
 	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	public void eliminar(Long id) {
+		experienciaRepository.deleteById(id);
 	}
+
 
 	@Override
 	public Experiencia editar(Experiencia experiencia) {
-		// TODO Auto-generated method stub
-		return null;
+		return experienciaRepository.save(experiencia);
 	}
 	
 }

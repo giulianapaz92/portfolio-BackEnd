@@ -1,35 +1,34 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.portfolio.miportfolio.model.Proyecto;
-import com.portfolio.miportfolio.repository.ProyectoRepository;
+import com.portfolio.miportfolio.repository.IProyectoRepository;
 
 @Service
 public class ProyectoService implements IProyectoService{
 	
 	@Autowired
-	ProyectoRepository proyectoRepository;
+	private IProyectoRepository proyectoRepository;
 
 	@Override
-	public ArrayList<Proyecto> getProyectos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public List<Proyecto> getProyectos() {
+		List<Proyecto> listaProyectos = proyectoRepository.findAll();
+		return listaProyectos;
+	} 
 
 	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	public void eliminar(Long id) {
+		proyectoRepository.deleteById(id);		
 	}
 
 	@Override
 	public Proyecto editar(Proyecto proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		return proyectoRepository.save(proyecto);
 	}
 
 }
