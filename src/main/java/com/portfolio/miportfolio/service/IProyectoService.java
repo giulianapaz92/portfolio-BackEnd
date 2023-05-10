@@ -1,18 +1,15 @@
 package com.portfolio.miportfolio.service;
 
-import java.util.ArrayList;
-
-import org.springframework.stereotype.Service;
+import java.util.List;
 
 import com.portfolio.miportfolio.model.Proyecto;
 
-@Service
 public interface IProyectoService {
 	
-	public ArrayList<Proyecto> getProyectos();
+	public List<Proyecto> getProyectos();
 	
-	public void eliminar();
+	public void eliminar(Long id);
 	
-	public Proyecto editar();
+	public Proyecto editar(Proyecto proyecto);
 
 }

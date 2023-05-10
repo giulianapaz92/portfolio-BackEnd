@@ -1,5 +1,9 @@
 package com.portfolio.miportfolio.repository;
 
-public class EducacionRepository {
+import org.springframework.stereotype.Repository;
 
+
+@Repository
+public class EducacionRepository {
+	
 }
