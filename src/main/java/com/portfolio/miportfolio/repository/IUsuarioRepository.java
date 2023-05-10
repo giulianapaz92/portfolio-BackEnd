@@ -6,5 +6,7 @@ import com.portfolio.miportfolio.model.Usuario;
 
 @Repository
 public interface IUsuarioRepository extends JpaRepository<Usuario, Long>{
+	
+	public Usuario findByMailAndPassword(String mail, String password);
 
 }
